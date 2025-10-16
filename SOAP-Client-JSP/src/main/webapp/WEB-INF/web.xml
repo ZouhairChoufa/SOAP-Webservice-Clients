@@ -1,0 +1,35 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+  <!-- JSP Servlet configuration -->
+  <servlet>
+    <servlet-name>jsp</servlet-name>
+    <init-param>
+      <param-name>modificationTestInterval</param-name>
+      <param-value>0</param-value>
+    </init-param>
+    <init-param>
+      <param-name>scratchDir</param-name>
+      <param-value>/tmp</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>jsp</servlet-name>
+    <url-pattern>*.jsp</url-pattern>
+  </servlet-mapping>
+
+  <!-- Your existing servlet configuration -->
+  <servlet>
+    <servlet-name>bookServlet</servlet-name>
+    <servlet-class>com.example.servlet.BookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bookServlet</servlet-name>
+    <url-pattern>/book</url-pattern>
+  </servlet-mapping>
+
+</web-app>
