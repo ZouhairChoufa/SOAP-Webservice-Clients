@@ -1,0 +1,10 @@
+# Composer dependencies
+/vendor/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+
+# Log files
+*.log
